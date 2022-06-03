@@ -13,6 +13,12 @@ import { useSelector } from "react-redux";
 import Profile from "./component/User/Profile.js";
 import ProtectedRoute from "./component/Route/ProtectedRoute";
 
+//shamali - user/ admin submission
+import SubmissionForm from "./component/Submission/SubmissionForm";
+import MarkingSchem from "./component/Submission/MarkingSchem";
+import AdminFileUpload from "./component/Submission/AdminFileUpload";
+import ReadAllSubmissionSupervi from "./component/Submission/ReadAllSubmissionSupervi";
+
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
@@ -34,6 +40,11 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={LoginSignUp} />
       <ProtectedRoute exact path="/account" component={Profile} />
+
+      <Route path="/submission" component={SubmissionForm} />
+      <Route path="/adminMarkingS" component={MarkingSchem} />
+      <Route path="/uploadT" component={AdminFileUpload} />
+      <Route path="/readSubmission" component={ReadAllSubmissionSupervi} />
       <Footer />
     </Router>
   );
