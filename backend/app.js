@@ -12,8 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //route imports
 const user = require("./routes/userRoute");
+const users = require("./controllers/usersController");
 
 app.use("/api/v1", user);
+app.use("/api/v1", users);
 
 //middleware for errors
 app.use(errorMiddleware);

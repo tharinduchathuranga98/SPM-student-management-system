@@ -3,6 +3,8 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const User = require("../models/userModels");
 const sendToken = require("../utils/jwtToken");
 const sendEmail = require("../utils/sendEmail");
+const jwt = require("jsonwebtoken");
+
 const crypto = require("crypto");
 
 //register an user

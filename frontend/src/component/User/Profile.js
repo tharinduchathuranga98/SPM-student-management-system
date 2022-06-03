@@ -24,8 +24,6 @@ const Profile = ({ history }) => {
             <div className="profileContainer">
               <div>
                 <h1>{user?.name}</h1>
-
-                <Link to="/me/update">Edit Profile</Link>
               </div>
               <div>
                 <div>
@@ -43,10 +41,6 @@ const Profile = ({ history }) => {
                 <div>
                   <h4>Joined On</h4>
                   <p>{String(user.createdAt).substr(0, 10)}</p>
-                </div>
-
-                <div>
-                  <Link to="/password/update">Change Password</Link>
                 </div>
               </div>
             </div>
