@@ -1,0 +1,27 @@
+
+    
+  
+  
+App {
+    margin: 0;
+    font-family: 'Open-Sans',sans-serif;
+    color: pink;
+    display: flex;
+    justify-content: center;
+    min-height: 800vh;
+    padding: 80px;
+    
+    margin: 0;
+    padding: 500;
+    box-sizing: border-box;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+
+  form-group{
+        margin-left: 50px;
+  }
