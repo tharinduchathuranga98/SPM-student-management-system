@@ -16,12 +16,6 @@ import ProtectedRoute from "./component/Route/ProtectedRoute";
 import usersHome from "./components/usersHome";
 import editUser from "./components/editUser";
 
-//shamali - user/ admin submission
-import SubmissionForm from "./component/Submission/SubmissionForm";
-import MarkingSchem from "./component/Submission/MarkingSchem";
-import AdminFileUpload from "./component/Submission/AdminFileUpload";
-import ReadAllSubmissionSupervi from "./component/Submission/ReadAllSubmissionSupervi";
-
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
@@ -43,18 +37,10 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={LoginSignUp} />
       <ProtectedRoute exact path="/account" component={Profile} />
-<<<<<<< HEAD
       <ProtectedRoute exact path="/me/update" component={UpdateProfile} />
 
       <Route path="/admin/dashboard" exact component={usersHome}></Route>
       <Route path="/admin/edit/:id" exact component={editUser}></Route>
-=======
-
-      <Route path="/submission" component={SubmissionForm} />
-      <Route path="/adminMarkingS" component={MarkingSchem} />
-      <Route path="/uploadT" component={AdminFileUpload} />
-      <Route path="/readSubmission" component={ReadAllSubmissionSupervi} />
->>>>>>> 93af78ec03e0d800d288aecc7a7aef022b023034
       <Footer />
     </Router>
   );
