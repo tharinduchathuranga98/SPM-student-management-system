@@ -15,18 +15,28 @@ import UpdateProfile from "./component/User/UpdateProfile.js";
 import ProtectedRoute from "./component/Route/ProtectedRoute";
 import usersHome from "./components/usersHome";
 import editUser from "./components/editUser";
+import SubmissionForm from "./component/Submition/SubmissionForm";
+import MarkingSchem from "./component/Submition/MarkingSchem";
+import AdminFileUpload from "./component/Submition/AdminFileUpload";
+import ReadAllSubmissionSupervi from "./component/Submition/ReadAllSubmissionSupervi";
 
-//Supi - research topic, request supervisor/co-supervisor
-import createResearchTopic from './component/Topic/createResearchTopic';
-import researchTopicDetails from './component/Topic/researchTopicDetails';
-import researchTopicHome from './component/Topic/researchTopicHome';
-import editResearchTopic from './component/Topic/editResearchTopic';
-import supervisorEmailer from './component/Topic/supervisorEmailer';
-import researchTopicReport from './component/Topic/researchTopicReport';
-import supervisorFieldsCreate from './component/Topic/supervisorFields/supervisorFieldsCreate';
-import supFieldsRetrieve from './component/Topic/supervisorFields/supFieldsRetrieve';
-import coSupFieldsCreate from './component/Topic/coSupervisorFields/coSupFieldsCreate';
-import coSupervisorRetrieve from './component/Topic/coSupervisorFields/coSupervisorRetrieve';
+import createResearchTopic from "./components/createResearchTopic";
+import researchTopicDetails from "./components/researchTopicDetails";
+import researchTopicHome from "./components/researchTopicHome";
+import editResearchTopic from "./components/editResearchTopic";
+import supervisorEmailer from "./components/supervisorEmailer";
+import researchTopicReport from "./components/researchTopicReport";
+import supervisorFieldsCreate from "./components/supervisorFields/supervisorFieldsCreate";
+import supFieldsRetrieve from "./components/supervisorFields/supFieldsRetrieve";
+import coSupFieldsCreate from "./components/coSupervisorFields/coSupFieldsCreate";
+import coSupervisorRetrieve from "./components/coSupervisorFields/coSupervisorRetrieve";
+import Dashboard from "./component/Dashboard/Dashboard";
+import EvaluationAdmin from "./component/Submition/EvaluationAdmin";
+
+import createStudentGrp from "./component/studentGrps/createStudentGrp";
+import studentGrps from "./component/studentGrps/studentGrps";
+import editStudentGrp from "./component/studentGrps/editStudentGrp";
+import studentGrpsDetails from "./component/studentGrps/studentGrpsDetails";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -51,27 +61,48 @@ function App() {
       <ProtectedRoute exact path="/account" component={Profile} />
       <ProtectedRoute exact path="/me/update" component={UpdateProfile} />
 
+      <Route path="/admin/users" exact component={usersHome}></Route>
+      <Route path="/admin/edit/:id" exact component={editUser}></Route>
+      <Route path="/admin/dashboard" exact component={Dashboard}></Route>
 
-      <Route path="/submission" component={SubmissionForm} />
+      <Route exact path="/submitform" component={SubmissionForm} />
       <Route path="/adminMarkingS" component={MarkingSchem} />
-      <Route path="/uploadT" component={AdminFileUpload} />
+      <Route path="/admin/uploadT" component={AdminFileUpload} />
       <Route path="/readSubmission" component={ReadAllSubmissionSupervi} />
 
-      {/*Supi - research topic, request supervisor/co-supervisor*/}
-      <Route path = "/topicHome" exact component = {researchTopicHome}></Route>
-        <Route path = "/add" exact component = {createResearchTopic}></Route>
-        <Route path = "/edit/:id" exact component = {editResearchTopic}></Route>
-        <Route path = "/post/:id" exact component = {researchTopicDetails}></Route>
-        <Route path="/email" exact component={supervisorEmailer}></Route>
-        <Route path="/topicsReport" exact component={researchTopicReport}></Route>
-        <Route path="/addSup" exact component={supervisorFieldsCreate}></Route>
-        <Route path="/supervisorhome" exact component={supFieldsRetrieve}></Route>        
-        <Route path="/addCoSup" exact component={coSupFieldsCreate}></Route>
-        <Route path="/coSupervisorhome" exact component={coSupervisorRetrieve}></Route>
+      <Route
+        path="/staff/readSubmission"
+        component={ReadAllSubmissionSupervi}
+      />
 
+      <Route
+        path="/admin/researchTopicHome"
+        exact
+        component={researchTopicHome}
+      />
+      <Route path="/addresearchTopic" exact component={createResearchTopic} />
+      <Route
+        path="/admin/editresearchTopic/:id"
+        exact
+        component={editResearchTopic}
+      />
+      <Route
+        path="/postresearchTopic/:id"
+        exact
+        component={researchTopicDetails}
+      />
+      <Route path="/email" exact component={supervisorEmailer} />
+      <Route path="/topicsReport" exact component={researchTopicReport} />
+      <Route path="/addSup" exact component={supervisorFieldsCreate} />
+      <Route path="/supervisorhome" exact component={supFieldsRetrieve} />
+      <Route path="/addCoSup" exact component={coSupFieldsCreate} />
+      <Route path="/coSupervisorhome" exact component={coSupervisorRetrieve} />
 
-      <Route path="/admin/dashboard" exact component={usersHome}></Route>
-      <Route path="/admin/edit/:id" exact component={editUser}></Route>
+      <Route path="/admin/studentGrps" component={studentGrps} />
+      <Route path="/stdgrpadd" component={createStudentGrp} />
+      <Route path="/update/:id" component={editStudentGrp} />
+      <Route path="/evalu" component={EvaluationAdmin} />
+      <Route path="/studentGrp/:id" component={studentGrpsDetails} />
 
       <Footer />
     </Router>
