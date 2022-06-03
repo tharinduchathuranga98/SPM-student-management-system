@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@material-ui/core": "^4.12.4",
@@ -19,6 +20,7 @@
     "react": "^18.1.0",
     "react-alert": "^7.0.3",
     "react-alert-template-basic": "^1.0.2",
+    "react-chat-engine": "^1.11.22",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
@@ -28,6 +30,7 @@
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
+    "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4",
     "webfontloader": "^1.6.28"
   },
