@@ -19,6 +19,18 @@ import MarkingSchem from "./component/Submission/MarkingSchem";
 import AdminFileUpload from "./component/Submission/AdminFileUpload";
 import ReadAllSubmissionSupervi from "./component/Submission/ReadAllSubmissionSupervi";
 
+//Supi - research topic, request supervisor/co-supervisor
+import createResearchTopic from './component/Topic/createResearchTopic';
+import researchTopicDetails from './component/Topic/researchTopicDetails';
+import researchTopicHome from './component/Topic/researchTopicHome';
+import editResearchTopic from './component/Topic/editResearchTopic';
+import supervisorEmailer from './component/Topic/supervisorEmailer';
+import researchTopicReport from './component/Topic/researchTopicReport';
+import supervisorFieldsCreate from './component/Topic/supervisorFields/supervisorFieldsCreate';
+import supFieldsRetrieve from './component/Topic/supervisorFields/supFieldsRetrieve';
+import coSupFieldsCreate from './component/Topic/coSupervisorFields/coSupFieldsCreate';
+import coSupervisorRetrieve from './component/Topic/coSupervisorFields/coSupervisorRetrieve';
+
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
@@ -45,6 +57,19 @@ function App() {
       <Route path="/adminMarkingS" component={MarkingSchem} />
       <Route path="/uploadT" component={AdminFileUpload} />
       <Route path="/readSubmission" component={ReadAllSubmissionSupervi} />
+
+      {/*Supi - research topic, request supervisor/co-supervisor*/}
+      <Route path = "/topicHome" exact component = {researchTopicHome}></Route>
+        <Route path = "/add" exact component = {createResearchTopic}></Route>
+        <Route path = "/edit/:id" exact component = {editResearchTopic}></Route>
+        <Route path = "/post/:id" exact component = {researchTopicDetails}></Route>
+        <Route path="/email" exact component={supervisorEmailer}></Route>
+        <Route path="/topicsReport" exact component={researchTopicReport}></Route>
+        <Route path="/addSup" exact component={supervisorFieldsCreate}></Route>
+        <Route path="/supervisorhome" exact component={supFieldsRetrieve}></Route>        
+        <Route path="/addCoSup" exact component={coSupFieldsCreate}></Route>
+        <Route path="/coSupervisorhome" exact component={coSupervisorRetrieve}></Route>
+
       <Footer />
     </Router>
   );
