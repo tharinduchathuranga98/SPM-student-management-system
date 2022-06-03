@@ -13,11 +13,6 @@ app.listen(process.env.PORT, () => {
   console.log(`Server is running on http://localhost:${process.env.PORT}`);
 });
 
-const filerouter = require("./routes/fileroute");
-const templaterouter = require("./routes/templatesRoute");
-
-
-
 mongoose
   .connect(DB_URL)
   .then(() => {
