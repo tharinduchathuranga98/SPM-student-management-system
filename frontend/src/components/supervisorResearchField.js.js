@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert';
-import BG from '../../images/r2giphy.gif';
+import BG from '../images/r2giphy.gif';
 
 export default class createResearchTopic extends Component {
 
