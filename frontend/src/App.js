@@ -11,13 +11,10 @@ import { loadUser } from "./action/userAction";
 import UserOptions from "./component/layout/Header/UserOptions";
 import { useSelector } from "react-redux";
 import Profile from "./component/User/Profile.js";
+import UpdateProfile from "./component/User/UpdateProfile.js";
 import ProtectedRoute from "./component/Route/ProtectedRoute";
-
-//shamali - user/ admin submission
-import SubmissionForm from "./component/Submission/SubmissionForm";
-import MarkingSchem from "./component/Submission/MarkingSchem";
-import AdminFileUpload from "./component/Submission/AdminFileUpload";
-import ReadAllSubmissionSupervi from "./component/Submission/ReadAllSubmissionSupervi";
+import usersHome from "./components/usersHome";
+import editUser from "./components/editUser";
 
 //Supi - research topic, request supervisor/co-supervisor
 import createResearchTopic from './component/Topic/createResearchTopic';
@@ -52,6 +49,8 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={LoginSignUp} />
       <ProtectedRoute exact path="/account" component={Profile} />
+      <ProtectedRoute exact path="/me/update" component={UpdateProfile} />
+
 
       <Route path="/submission" component={SubmissionForm} />
       <Route path="/adminMarkingS" component={MarkingSchem} />
@@ -69,6 +68,10 @@ function App() {
         <Route path="/supervisorhome" exact component={supFieldsRetrieve}></Route>        
         <Route path="/addCoSup" exact component={coSupFieldsCreate}></Route>
         <Route path="/coSupervisorhome" exact component={coSupervisorRetrieve}></Route>
+
+
+      <Route path="/admin/dashboard" exact component={usersHome}></Route>
+      <Route path="/admin/edit/:id" exact component={editUser}></Route>
 
       <Footer />
     </Router>

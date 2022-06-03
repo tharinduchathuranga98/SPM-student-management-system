@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //route imports
 const user = require("./routes/userRoute");
+
 const filerouter = require("./routes/fileroute");
 const templaterouter = require("./routes/templatesRoute");
 const postRoutes = require('./controllers/researchTopicReg');
@@ -26,5 +27,9 @@ app.use("/api", postRoutes);
 app.use("/api", postRoutesSupervisor);
 app.use("/api", postRoutesCoSupervisor);
 
+const users = require("./controllers/usersController");
+
+app.use("/api/v1", user);
+app.use("/api/v1", users);
 
 module.exports = app;
