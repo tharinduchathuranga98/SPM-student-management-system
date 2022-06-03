@@ -13,6 +13,15 @@ import { useSelector } from "react-redux";
 import Profile from "./component/User/Profile.js";
 import ProtectedRoute from "./component/Route/ProtectedRoute";
 
+
+import createStudentGrp from './component/studentGrps/createStudentGrp';
+import studentGrps from './component/studentGrps/studentGrps';
+import editStudentGrp from './component/studentGrps/editStudentGrp';
+import studentGrpsDetails from './component/studentGrps/studentGrpsDetails';
+import chat from './component/chat/chat';
+
+
+
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
@@ -34,6 +43,11 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={LoginSignUp} />
       <ProtectedRoute exact path="/account" component={Profile} />
+      <Route path="/studentGrps" component={studentGrps}></Route>
+      <Route path="/add" component={createStudentGrp}></Route>
+      <Route path='/update/:id' component={editStudentGrp}></Route>
+      <Route path='/studentGrp/:id' component={studentGrpsDetails}></Route>
+      <Route path='/chat' component={chat}></Route>
       <Footer />
     </Router>
   );
