@@ -17,7 +17,7 @@ export default class studentGrps extends Component {
 
   retrieveStudentGrps() {
     axios.get("/studentGrps").then((res) => {
-      console.log("hello");
+      console.log("hello3");
       if (res.data.success) {
         this.setState({
           studentGrps: res.data.existingstudentGrps,
