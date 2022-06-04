@@ -185,9 +185,7 @@ export default class researchTopicHome extends Component {
             ))}
           </tbody>
         </table>
-        <button className="btn-primary" onClick={this.jsPdfGenerator}>
-          Generate Report PDF
-        </button>
+        
       </div>
     );
   }
