@@ -93,7 +93,7 @@ export default class editResearchTopic extends Component {
     } else {
       axios.put(`/api/v1/postTopic/update/${id} `, data).then((res) => {
         if (res.data.success) {
-          swal("Successful!", "Research Topic Status Updated", "success");
+          swal("Successful!", "Research Topic Accepted", "success");
           this.setState({
             studentsGrpId: "",
             researchField: "",
@@ -135,7 +135,11 @@ export default class editResearchTopic extends Component {
 
           width: "50%",
 
+
           backgroundImage: `url('https://i.pinimg.com/originals/7a/d0/55/7ad055a634f77aaffde8f9de6ff3d599.jpg')`,
+
+          backgroundImage: `url('https://previews.123rf.com/images/pospelowa/pospelowa1703/pospelowa170300023/73692302-dry-flowers-on-a-white-wooden-background-wallpaper.jpg')`,
+
 
           backgroundPosition: "center",
 
@@ -151,14 +155,16 @@ export default class editResearchTopic extends Component {
                     className="h3 mb-3 font-weight-normal"
                     style={{
                       backgroundColor: "#d4eff9",
-                      marginTop: "3px",
+                      marginTop: "40px",
                       color: "navy",
-                      width: "150%",
-                      textAlign: "center",
                     }}
                   >
                     <font face="Comic sans MS" size="6">
+
                       <b>Accept/Reject Research Topics</b>
+
+                      <b>Accept/Reject Reserach Topic Details</b>
+
                     </font>
                   </h1>
                   <br />
@@ -286,18 +292,22 @@ export default class editResearchTopic extends Component {
                     >
                       <b>Status:</b>
                     </label>
-                    <select
+                    <input
+                      type="text"
                       className="form-control"
-                      style ={{marginBottom:'15px', maxWidth:'500px'}}
                       name="status"
-                      placeholder="Status"
+                      placeholder="Enter status"
                       value={this.state.status}
                       onChange={this.handleInputChange}
                       required
+
                     >
                       <option value = "Pending" >Pending</option>
                       <option value = "Accepted" style ={{color: 'green'}}>Accepted</option>
                       <option value = "Rejected" style ={{color: 'red'}}>Rejected</option> </select>
+
+                    />
+
                   </div>
 
                   <button
