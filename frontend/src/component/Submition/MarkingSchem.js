@@ -20,7 +20,7 @@ function MarkingSchem() {
   ]);
 
 
-  //Template link retrive code start here
+  //Template link retrive code start Here
   useEffect(() => {
     const fetchUploads = async () => {
       setLoading(true);
@@ -41,7 +41,6 @@ function MarkingSchem() {
 
 
   //Evaluation retrive code start here
-
   useEffect(() => {
     const fetchUploads = async () => {
       setLoading(true);

@@ -7,7 +7,6 @@ import {
 } from "@firebase/storage";
 import axios from "../../action/axios";
 import BG1 from "../../images/alldoc.png";
-
 import swal from "sweetalert";
 import { app } from "../../firebase";
 import { Button, Form, Input } from "antd";
@@ -42,6 +41,7 @@ function AdminFileUpload() {
     const storageRef = ref(storage, `/admin-templates/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
+    //adding student submission firebase and mongo db
     uploadTask.on(
       "state_changed",
       (snapshot) => {

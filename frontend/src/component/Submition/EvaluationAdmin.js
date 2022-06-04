@@ -7,7 +7,6 @@ import {
 } from "@firebase/storage";
 import axios from "../../action/axios";
 import BG1 from "../../images/excel.png";
-
 import swal from "sweetalert";
 import { app } from "../../firebase";
 import { Button, Form, Input } from "antd";
@@ -34,6 +33,7 @@ function AdminFileUpload() {
     wrapperCol: { offset: 8, span: 8 },
   };
 
+  //get file 
   const formHandler = (e) => {
     e.preventDefault();
 
