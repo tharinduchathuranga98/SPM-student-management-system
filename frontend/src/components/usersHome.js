@@ -71,11 +71,22 @@ export default class usersHome extends Component {
     return (
       <div className="container">
         <div className="text-center">
-          <h2 className="adminletter"> All User Details </h2>
+          <h1 className="adminletter" style={{ color: "navy" }}>
+            <b>All User Details </b>
+          </h1>
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
         <div className="col-md-6 mb-4">
           <form class="form-inline">
             <i class="fas fa-search" aria-hidden="true"></i>
+            <br />
+            <br />
+            <br />
+            <br />
+
             <input
               className="form-control form-control-sm ml-3 w-75"
               type="search"
@@ -93,7 +104,6 @@ export default class usersHome extends Component {
               <th scope="col">Email</th>
               <th scope="col">Role</th>
               <th scope="col">idNumber</th>
-              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>

@@ -95,7 +95,7 @@ export default class editUser extends Component {
 
           width: "50%",
 
-          backgroundImage: `url('https://previews.123rf.com/images/pospelowa/pospelowa1703/pospelowa170300023/73692302-dry-flowers-on-a-white-wooden-background-wallpaper.jpg')`,
+          backgroundImage: `url('https://i.pinimg.com/736x/f6/53/28/f65328efde771da9af5a59cb99147883.jpg')`,
 
           backgroundPosition: "center",
 
@@ -159,16 +159,25 @@ export default class editUser extends Component {
                     <label style={{ marginBottom: "5px" }}>
                       <b>Role:</b>
                     </label>
-                    <input
-                      style={{ width: "400px" }}
-                      type="text"
+                    <select
                       className="form-control"
+                      style={{ marginBottom: "15px", maxWidth: "500px" }}
                       name="role"
                       placeholder="Role"
                       value={this.state.role}
                       onChange={this.handleInputChange}
                       required
-                    />
+                    >
+                      <option value="admin" style={{ color: "red" }}>
+                        Admin
+                      </option>
+                      <option value="student" style={{ color: "black" }}>
+                        Student
+                      </option>
+                      <option value="staff" style={{ color: "black" }}>
+                        Staff
+                      </option>{" "}
+                    </select>
                   </div>
 
                   <div className="form-group" style={{ marginBottom: "15px" }}>

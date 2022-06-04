@@ -351,14 +351,26 @@ export default class createResearchTopic extends Component {
                         />
                       </div>
 
-                      <div className="form-group" style={{ marginBottom: '15px' }}><br></br>
-                        <label style={{ marginBottom: '5px',fontSize:'19px' }} className="topic"><b>Status: </b></label>
-                        <input type=""
+                      <div
+                        className="form-group"
+                        style={{ marginBottom: "15px" }}
+                      >
+                        <br></br>
+                        <label
+                          style={{ marginBottom: "5px", fontSize: "19px" }}
+                          className="topic"
+                        >
+                          <b>Status: </b>
+                        </label>
+                        <input
+                          type=""
                           className="form-control"
                           name="status"
                           placeholder="Pending"
                           value={this.state.status}
-                          onChange={this.handleInputChange} readOnly={true}/>
+                          onChange={this.handleInputChange}
+                          readOnly={true}
+                        />
                       </div>
 
                       <button
@@ -373,7 +385,7 @@ export default class createResearchTopic extends Component {
                       <button
                         className="btn btn-primary"
                         type="submit"
-                        style={{ marginTop: "15px", width: "45%"}}
+                        style={{ marginTop: "15px", width: "45%" }}
                         onClick={this.onSubmit}
                       >
                         <i className="far fa-check-square"></i>

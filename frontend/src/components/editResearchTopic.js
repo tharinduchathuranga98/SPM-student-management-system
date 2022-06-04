@@ -288,16 +288,21 @@ export default class editResearchTopic extends Component {
                     </label>
                     <select
                       className="form-control"
-                      style ={{marginBottom:'15px', maxWidth:'500px'}}
+                      style={{ marginBottom: "15px", maxWidth: "500px" }}
                       name="status"
                       placeholder="Status"
                       value={this.state.status}
                       onChange={this.handleInputChange}
                       required
                     >
-                      <option value = "Pending" >Pending</option>
-                      <option value = "Accepted" style ={{color: 'green'}}>Accepted</option>
-                      <option value = "Rejected" style ={{color: 'red'}}>Rejected</option> </select>
+                      <option value="Pending">Pending</option>
+                      <option value="Accepted" style={{ color: "green" }}>
+                        Accepted
+                      </option>
+                      <option value="Rejected" style={{ color: "red" }}>
+                        Rejected
+                      </option>{" "}
+                    </select>
                   </div>
 
                   <button
