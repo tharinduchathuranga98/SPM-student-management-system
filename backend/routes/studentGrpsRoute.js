@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const studentGrp = require("../models/studentGrp");
 
-//http://localhost:5000/studentGrps
+//Get all student groups
 router.get ("/", async (req, res, next) => {
     let studentGrps;
     try {
@@ -20,7 +20,7 @@ router.get ("/", async (req, res, next) => {
     });
   });
 
-  //http://localhost:5000/studentGrps/add
+  //add new student group
   router.post ("/add", async (req, res, next) => {
     const { 
         leaderName,
@@ -66,7 +66,7 @@ router.get ("/", async (req, res, next) => {
     });
   });
 
-
+//Get specific student group
 router.get("/:id",async(req,res,next) => {
     const id = req.params.id;
     let stdGrp;
@@ -85,6 +85,7 @@ router.get("/:id",async(req,res,next) => {
   });
 
 
+  //Update specific student group
   router.put('/update/:id', async(req,res) => {
     const id = req.params.id;
     const { 
@@ -130,7 +131,7 @@ router.get("/:id",async(req,res,next) => {
     });
   });
 
-
+//Delete specific student group
 router.delete('/delete/:id' ,async(req,res) =>{
     const id = req.params.id;
     let stdGrp;
@@ -144,7 +145,6 @@ router.delete('/delete/:id' ,async(req,res) =>{
     }
     return res.status(200).json({ message: "Student group successfully deleted" });
   });
-
 
 
   module.exports = router;
