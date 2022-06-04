@@ -15,7 +15,6 @@ export default class createResearchTopic extends Component {
       selectedTopic: "",
       grpLeaderName: "",
       grpLeaderEmail: "",
-      status: "",
     };
   }
 
@@ -38,7 +37,6 @@ export default class createResearchTopic extends Component {
       selectedTopic,
       grpLeaderName,
       grpLeaderEmail,
-      status,
     } = this.state;
 
     const data = {
@@ -48,7 +46,6 @@ export default class createResearchTopic extends Component {
       selectedTopic: selectedTopic,
       grpLeaderName: grpLeaderName,
       grpLeaderEmail: grpLeaderEmail,
-      status: status,
     };
 
     console.log(data);
@@ -150,9 +147,6 @@ export default class createResearchTopic extends Component {
     });
     this.setState({
       grpLeaderEmail: "it20147414@my.sliit.lk",
-    });
-    this.setState({
-      status: "Pending",
     });
   };
 
@@ -351,16 +345,6 @@ export default class createResearchTopic extends Component {
                         />
                       </div>
 
-                      <div className="form-group" style={{ marginBottom: '15px' }}><br></br>
-                        <label style={{ marginBottom: '5px',fontSize:'19px' }} className="topic"><b>Status: </b></label>
-                        <input type=""
-                          className="form-control"
-                          name="status"
-                          placeholder="Pending"
-                          value={this.state.status}
-                          onChange={this.handleInputChange} readOnly={true}/>
-                      </div>
-
                       <button
                         type="button"
                         class="btn btn-outline-primary"
@@ -373,7 +357,7 @@ export default class createResearchTopic extends Component {
                       <button
                         className="btn btn-primary"
                         type="submit"
-                        style={{ marginTop: "15px", width: "45%"}}
+                        style={{ marginTop: "15px" }}
                         onClick={this.onSubmit}
                       >
                         <i className="far fa-check-square"></i>
