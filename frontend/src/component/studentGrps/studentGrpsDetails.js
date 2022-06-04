@@ -41,9 +41,7 @@ export default class studentGrpsDetails extends Component {
     return (
       <div style={{ marginTop: "20px" }}>
         <div className="container" style={{ width: "600px" }}>
-          <h1 className="text-center"> 
-              Group Details
-          </h1>
+          <h1 className="text-center"> Group Details</h1>
           <br></br>
           <table className="table table-sm ">
             <tbody>

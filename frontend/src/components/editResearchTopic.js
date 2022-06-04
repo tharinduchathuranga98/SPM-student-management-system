@@ -135,11 +135,7 @@ export default class editResearchTopic extends Component {
 
           width: "50%",
 
-
-          backgroundImage: `url('https://i.pinimg.com/originals/7a/d0/55/7ad055a634f77aaffde8f9de6ff3d599.jpg')`,
-
           backgroundImage: `url('https://previews.123rf.com/images/pospelowa/pospelowa1703/pospelowa170300023/73692302-dry-flowers-on-a-white-wooden-background-wallpaper.jpg')`,
-
 
           backgroundPosition: "center",
 
@@ -160,11 +156,7 @@ export default class editResearchTopic extends Component {
                     }}
                   >
                     <font face="Comic sans MS" size="6">
-
-                      <b>Accept/Reject Research Topics</b>
-
                       <b>Accept/Reject Reserach Topic Details</b>
-
                     </font>
                   </h1>
                   <br />
@@ -172,7 +164,7 @@ export default class editResearchTopic extends Component {
                 <br />
                 <form className="needs-validation" noValidate>
                   <div className="form-group" style={{ marginBottom: "15px" }}>
-                    <label style={{ marginBottom: "5px", fontSize: "19px" }}>
+                    <label style={{ marginBottom: "5px" }}>
                       <b>Students' Group ID: </b>
                     </label>
                     <input
@@ -300,14 +292,7 @@ export default class editResearchTopic extends Component {
                       value={this.state.status}
                       onChange={this.handleInputChange}
                       required
-
-                    >
-                      <option value = "Pending" >Pending</option>
-                      <option value = "Accepted" style ={{color: 'green'}}>Accepted</option>
-                      <option value = "Rejected" style ={{color: 'red'}}>Rejected</option> </select>
-
                     />
-
                   </div>
 
                   <button
