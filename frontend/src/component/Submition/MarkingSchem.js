@@ -20,7 +20,7 @@ function MarkingSchem() {
   ]);
 
 
-  //Template link retrive code start here
+  //Template link retrive code start here from mongodb
   useEffect(() => {
     const fetchUploads = async () => {
       setLoading(true);
@@ -40,7 +40,7 @@ function MarkingSchem() {
   }, []);
 
 
-  //Evaluation retrive code start here
+  //Evaluation retrive code start here from mongodb
 
   useEffect(() => {
     const fetchUploads = async () => {

@@ -5,7 +5,7 @@ const path = require("path");
 
 const router = express.Router();
 
-//insert mobile payment data in data base
+//insert File  in data base
 router.post("/adfile/save", (req, res) => {
   let newViewFile = new ViewFile(req.body);
 
@@ -21,7 +21,7 @@ router.post("/adfile/save", (req, res) => {
     });
   });
 });
-//retrive mobile payment data
+//retrive file Submission
 router.get("/file", (req, res) => {
   ViewFile.find().exec((err, viewfile) => {
     if (err) {
@@ -37,7 +37,7 @@ router.get("/file", (req, res) => {
   });
 });
 
-//get a specific data
+//get a specific unic submission link
 router.get("/file/:id", (req, res) => {
   let groupurl = req.params.id;
   ViewFile.findById(groupurl, (err, viewfile) => {
