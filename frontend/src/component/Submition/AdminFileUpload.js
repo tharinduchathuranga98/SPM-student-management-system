@@ -34,6 +34,7 @@ function AdminFileUpload() {
     wrapperCol: { offset: 8, span: 8 },
   };
 
+  //adding admin template to firebase and mongodb
   const formHandler = (e) => {
     e.preventDefault();
 

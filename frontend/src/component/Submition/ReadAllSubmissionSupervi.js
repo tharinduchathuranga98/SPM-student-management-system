@@ -14,6 +14,7 @@ class ReadAllSubmissionSupervi extends Component {
     this.retrievePosts();
   }
 
+  //retrive all submission 
   retrievePosts() {
     axios.get("/api/v1/file").then((res) => {
       if (res.data.success) {
@@ -25,6 +26,7 @@ class ReadAllSubmissionSupervi extends Component {
     });
   }
 
+  //search submission by group id
   filterData(posts, searchKey) {
     const result = posts.filter((post) =>
       post.groupId.toLowerCase().includes(searchKey)
