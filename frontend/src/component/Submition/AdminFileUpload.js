@@ -132,19 +132,21 @@ function AdminFileUpload() {
                       </label>
                       <br></br>
                       <br></br>
-                      <input
-                        type="file"
-                        className="input"
-                        style={{
-                          marginRight: "150px",
-                          textDecoration: "none",
-                          color: "Black",
-                          fontSize: "medium",
-                        }}
-                        onChange={(e) => {
-                          setFile(e.target.files[0]);
-                        }}
-                      />
+                      <div>
+                        <input
+                          type="file"
+                          className="input"
+                          style={{
+                            marginLeft: "30%",
+                            textDecoration: "none",
+                            color: "Black",
+                            fontSize: "medium",
+                          }}
+                          onChange={(e) => {
+                            setFile(e.target.files[0]);
+                          }}
+                        />
+                      </div>
                     </div>
 
                     <div className="form-group">

@@ -20,6 +20,7 @@ import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import AssignmetReturnedIcon from "@mui/icons-material/AssignmentReturned";
+import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
 
 const UserOptions = ({ user }) => {
   const [open, setOpen] = useState(false);
@@ -76,6 +77,18 @@ const UserOptions = ({ user }) => {
     );
   }
 
+  if (
+    user.role === "admin" ||
+    user.role === "staff" ||
+    user.role === "student"
+  ) {
+    options.unshift({
+      icon: <ChatOutlinedIcon />,
+      name: "Chat",
+      func: chat,
+    });
+  }
+
   if (user.role === "student") {
     options.unshift(
       {
@@ -108,6 +121,9 @@ const UserOptions = ({ user }) => {
 
   function dashboard() {
     history.push("/admin/dashboard");
+  }
+  function chat() {
+    history.push("/chat");
   }
 
   function topicsReport() {

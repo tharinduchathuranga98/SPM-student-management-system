@@ -186,7 +186,7 @@ function SubmissionForm() {
                       type="file"
                       className="input"
                       style={{
-                        marginRight: "150px",
+                        marginLeft: "30%",
                         textDecoration: "none",
                         color: "Black",
                         fontSize: "medium",
@@ -208,7 +208,7 @@ function SubmissionForm() {
                     style={{
                       textDecoration: "none",
                       color: "white",
-                      width: "13%",
+                      width: "15%",
                       marginRight: "200px",
                     }}
                     onClick={formHandler}

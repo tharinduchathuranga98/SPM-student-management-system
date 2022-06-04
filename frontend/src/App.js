@@ -37,6 +37,7 @@ import createStudentGrp from "./component/studentGrps/createStudentGrp";
 import studentGrps from "./component/studentGrps/studentGrps";
 import editStudentGrp from "./component/studentGrps/editStudentGrp";
 import studentGrpsDetails from "./component/studentGrps/studentGrpsDetails";
+import chat from "./component/chat/chat";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -102,6 +103,7 @@ function App() {
       <Route path="/stdgrpadd" component={createStudentGrp} />
       <Route path="/update/:id" component={editStudentGrp} />
       <Route path="/evalu" component={EvaluationAdmin} />
+      <Route path="/chat" component={chat} />
       <Route path="/studentGrp/:id" component={studentGrpsDetails} />
 
       <Footer />
