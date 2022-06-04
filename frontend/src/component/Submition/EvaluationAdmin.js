@@ -34,7 +34,6 @@ function AdminFileUpload() {
         wrapperCol: { offset: 8, span: 8 },
     };
 
-    //adding evaluation to firebase database and mongo db
     const formHandler = (e) => {
         e.preventDefault();
 

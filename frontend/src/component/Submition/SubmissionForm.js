@@ -27,7 +27,6 @@ function SubmissionForm() {
     },
   ]);
 
-  //get student submission
   useEffect(() => {
     const fetchSubmissions = async () => {
       setLoading(true);
@@ -45,8 +44,6 @@ function SubmissionForm() {
     fetchSubmissions();
   }, []);
 
-
-  //upload student submission
   const formHandler = (e) => {
     e.preventDefault();
 
