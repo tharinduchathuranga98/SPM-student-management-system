@@ -170,7 +170,7 @@ export default class researchTopicHome extends Component {
                     className="btn btn-warning"
                     href={`/admin/editresearchTopic/${posts._id}`}
                   >
-                    <i className="fas fa-edit"></i>&nbsp;EDIT
+                    <i className="fas fa-edit"></i>&nbsp;EVALUATE
                   </a>
                   &nbsp;
                   <a
