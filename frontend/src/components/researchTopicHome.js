@@ -185,7 +185,6 @@ export default class researchTopicHome extends Component {
             ))}
           </tbody>
         </table>
-        
       </div>
     );
   }
