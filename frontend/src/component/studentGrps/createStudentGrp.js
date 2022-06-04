@@ -36,8 +36,8 @@ handleInputChange = (e) => {
 onSubmit = (e) => {
   e.preventDefault();
 
-  const { leaderName, leaderID, leaderEmail, member1Name, member1ID, member1Email, member2Name, member2ID, member2Email,
-     member3Name, member3ID, member3Email } = this.state;
+  const { leaderName, leaderID, leaderEmail, member1Name, member1ID, member1Email, member2Name, member2ID, 
+          member3Name, member3ID, member3Email } = this.state;
 
   const data = {
       leaderName: leaderName,
@@ -156,75 +156,156 @@ else {
                 <label for="exampleInputEmail1">
                   Student Registration Number:
                 </label>
-    <input type="text" class="form-control" name="leaderID" aria-describedby="emailHelp" placeholder="eg: IT20133625"
-            value={this.state.leaderID} onChange={this.handleInputChange} required/>
-  </div>
-  <div className="form-group">
-    <label for="exampleInputPassword1">Student Email:</label>
-    <input type="text" className="form-control" name="leaderEmail" placeholder="eg: IT20133625@my.sliit.lk" 
-            value={this.state.leaderEmail} onChange={this.handleInputChange} required/>
-  </div>
-  <br></br>
-  <h5 className="text-center">Details of Member 1</h5>
-  <div className="form-group">
-  <div className="form-group">
-    <label for="exampleInputPassword1">Name(As per the name in Student ID):</label>
-    <input type="text" className="form-control" name="member1Name" placeholder="eg:  Romeshika H.D.S"
-          value={this.state.member1Name} onChange={this.handleInputChange} required/>
-  </div>
-    <label for="exampleInputEmail1">Student Registration Number:</label>
-    <input type="text" class="form-control" name="member1ID" aria-describedby="emailHelp" placeholder="eg: IT20133625"
-          value={this.state.member1ID} onChange={this.handleInputChange} required/>
-
-  </div>
-  <div className="form-group">
-    <label for="exampleInputPassword1">Student Email:</label>
-    <input type="text" className="form-control" name="member1Email" placeholder="eg: IT20133625@my.sliit.lk"
-          value={this.state.member1Email} onChange={this.handleInputChange} required/>
-  </div>
-  <br></br>
-  <h5 className="text-center">Details of Member 2</h5>
-  <div className="form-group">
-  <div className="form-group">
-    <label for="exampleInputPassword1">Name(As per the name in Student ID):</label>
-    <input type="text" className="form-control" name="member2Name" placeholder="eg:  Romeshika H.D.S"
-          value={this.state.member2Name} onChange={this.handleInputChange} required/>
-  </div>
-    <label for="exampleInputEmail1">Student Registration Number:</label>
-    <input type="text" class="form-control" name="member2ID" aria-describedby="emailHelp" placeholder="eg: IT20133625"
-          value={this.state.member2ID} onChange={this.handleInputChange} required/>
-
-  </div>
-  <div className="form-group">
-    <label for="exampleInputPassword1">Student Email:</label>
-    <input type="text" className="form-control" name="member2Email" placeholder="eg: IT20133625@my.sliit.lk"
-         value={this.state.member2Email} onChange={this.handleInputChange} required/>
-  </div>
-  <br></br>
-  <h5 className="text-center">Details of Member 3</h5>
-  <div className="form-group">
-  <div className="form-group">
-    <label for="exampleInputPassword1">Name(As per the name in Student ID):</label>
-    <input type="text" className="form-control" name="member3Name" placeholder="eg:  Romeshika H.D.S"
-           value={this.state.member3Name} onChange={this.handleInputChange} required/>
-  </div>
-    <label for="exampleInputEmail1">Student Registration Number:</label>
-    <input type="text" class="form-control" name="member3ID" aria-describedby="emailHelp" placeholder="eg: IT20133625"
-           value={this.state.member3ID} onChange={this.handleInputChange} required/>
-
-  </div>
-  <div className="form-group">
-    <label for="exampleInputPassword1">Student Email:</label>
-    <input type="text" className="form-control" name="member3Email" placeholder="eg: IT20133625@my.sliit.lk"
-         value={this.state.member3Email} onChange={this.handleInputChange} required/>
-  </div>
-  <br></br>
-  <div className='container' style={{width: "170px"}}>
-  <button type="submit" onClick={this.onSubmit} className="btn btn-primary" style={{width: "150px", fontSize: "large", backgroundColor: "MidnightBlue"}}>Submit</button>
-  </div>
-</form>
-<br></br>
-      </div>
+                    <input type="text" 
+                           class="form-control" 
+                           name="leaderID" 
+                           aria-describedby="emailHelp" 
+                           placeholder="eg: IT20133625"
+                           value={this.state.leaderID} 
+                           onChange={this.handleInputChange} 
+                           required/>
+            </div>
+            <div className="form-group">
+                <label for="exampleInputPassword1">
+                  Student Email:
+                </label>
+                    <input type="text" 
+                           className="form-control" 
+                           name="leaderEmail" 
+                           placeholder="eg: IT20133625@my.sliit.lk" 
+                           value={this.state.leaderEmail} 
+                           onChange={this.handleInputChange} 
+                           required/>
+            </div>
+            <br></br>
+                 <h5 className="text-center">Details of Member 1</h5>
+            <div className="form-group">
+                <div className="form-group">
+                    <label for="exampleInputPassword1">
+                      Name(As per the name in Student ID):
+                    </label>
+                         <input type="text" 
+                                className="form-control" 
+                                name="member1Name" 
+                                placeholder="eg:  Romeshika H.D.S"
+                                value={this.state.member1Name} 
+                                onChange={this.handleInputChange} 
+                                required/>
+                </div>
+                    <label for="exampleInputEmail1">
+                        Student Registration Number:
+                    </label>
+                          <input type="text" 
+                                 class="form-control" 
+                                 name="member1ID" 
+                                 aria-describedby="emailHelp" 
+                                 placeholder="eg: IT20133625"
+                                 value={this.state.member1ID} 
+                                 onChange={this.handleInputChange} 
+                                 required/>
+                </div>
+                <div className="form-group">
+                    <label for="exampleInputPassword1">
+                      Student Email:
+                    </label>
+                          <input type="text" 
+                                 className="form-control" 
+                                 name="member1Email" 
+                                 placeholder="eg: IT20133625@my.sliit.lk"
+                                 value={this.state.member1Email} 
+                                 onChange={this.handleInputChange} 
+                                 required/>
+                </div>
+                <br></br>
+                      <h5 className="text-center">Details of Member 2</h5>
+                <div className="form-group">
+                  <div className="form-group">
+                      <label for="exampleInputPassword1">
+                        Name(As per the name in Student ID):
+                      </label>
+                           <input type="text" 
+                                  className="form-control" 
+                                  name="member2Name" 
+                                  placeholder="eg:  Romeshika H.D.S"
+                                  value={this.state.member2Name} 
+                                  onChange={this.handleInputChange} 
+                                  required/>
+                  </div>
+                      <label for="exampleInputEmail1">
+                        Student Registration Number:
+                      </label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   name="member2ID" 
+                                   aria-describedby="emailHelp" 
+                                   placeholder="eg: IT20133625"
+                                   value={this.state.member2ID} 
+                                   onChange={this.handleInputChange} 
+                                   required/>
+                   </div>
+                    <div className="form-group">
+                      <label for="exampleInputPassword1">
+                        Student Email:
+                      </label>
+                              <input type="text" 
+                                     className="form-control" 
+                                     name="member2Email" 
+                                     placeholder="eg: IT20133625@my.sliit.lk"
+                                     value={this.state.member2Email} 
+                                     onChange={this.handleInputChange} 
+                                     required/>
+                    </div>
+                    <br></br>
+                        <h5 className="text-center">Details of Member 3</h5>
+                    <div className="form-group">
+                      <div className="form-group">
+                         <label for="exampleInputPassword1">
+                           Name(As per the name in Student ID):
+                         </label>
+                              <input type="text" 
+                                     className="form-control" 
+                                     name="member3Name" 
+                                     placeholder="eg:  Romeshika H.D.S"
+                                     value={this.state.member3Name} 
+                                     onChange={this.handleInputChange} 
+                                     required/>
+                      </div>
+                          <label for="exampleInputEmail1">
+                            Student Registration Number:
+                          </label>
+                              <input type="text" 
+                                     class="form-control" 
+                                     name="member3ID" 
+                                     aria-describedby="emailHelp" 
+                                     placeholder="eg: IT20133625"
+                                     value={this.state.member3ID} 
+                                     onChange={this.handleInputChange} 
+                                     required/>
+                      </div>
+                        <div className="form-group">
+                          <label for="exampleInputPassword1">
+                            Student Email:
+                          </label>
+                              <input type="text" 
+                                     className="form-control" 
+                                     name="member3Email" 
+                                     placeholder="eg: IT20133625@my.sliit.lk"
+                                     value={this.state.member3Email} 
+                                     onChange={this.handleInputChange} 
+                                     required/>
+                          </div>
+                     <br></br>
+                  <div className='container' style={{width: "170px"}}>
+                    <button type="submit" 
+                            onClick={this.onSubmit} 
+                            className="btn btn-primary" 
+                            style={{width: "150px", fontSize: "large", backgroundColor: "MidnightBlue"}}>
+                            Submit
+                    </button>
+          </div>
+    </form>
+   <br></br>
+</div>
     )
   }
 }
