@@ -27,6 +27,7 @@ function SubmissionForm() {
     },
   ]);
 
+  //get user submission link
   useEffect(() => {
     const fetchSubmissions = async () => {
       setLoading(true);
@@ -265,9 +266,7 @@ function SubmissionForm() {
                     </button>
                   ))}
                   &nbsp; &nbsp;
-                  {/* <button style={{ width: "5%", height: "0%", border: "white" }} onClick={() => deleteFiles(_id)}>
-                                    <img src={BG1} alt='bg img' style={{ width: "100%", height: "100%", marginTop: "0px", marginRight: "0px" }} />
-                                </button> */}
+
                 </center>
               </div>
             </center>

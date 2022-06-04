@@ -10,6 +10,7 @@ class ReadAllSubmissionSupervi extends Component {
     };
   }
 
+  //restrive post
   componentDidMount() {
     this.retrievePosts();
   }
@@ -25,6 +26,7 @@ class ReadAllSubmissionSupervi extends Component {
     });
   }
 
+  //search group id and get student submission link
   filterData(posts, searchKey) {
     const result = posts.filter((post) =>
       post.groupId.toLowerCase().includes(searchKey)
@@ -59,7 +61,6 @@ class ReadAllSubmissionSupervi extends Component {
           <form class="form-inline">
             <i class="fas fa-search" aria-hidden="true"></i>
             <br></br>
-
             <input
               className="form-control form-control-sm ml-3 w-75"
               type="search"
@@ -98,7 +99,6 @@ class ReadAllSubmissionSupervi extends Component {
                     {posts.url}
                   </a>
                 </td>
-
                 <td>&nbsp;</td>
               </tr>
             ))}
